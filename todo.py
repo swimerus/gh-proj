@@ -8,6 +8,10 @@ def display_tasks():
         print(f"{idx}. {task}")
     print()
 
+def add_task(task:str):
+    tasks.append(task)
+    
+
 def menu():
     while True:
         print("1. Dodaj zadanie")
@@ -19,7 +23,8 @@ def menu():
 
         match choice:
             case "1":
-                print("Opcja do zaimplementowania")
+                new_task = input("Podaj nowe zadanie: ")
+                add_task(new_task)
             case "2":
                 print("Opcja do zaimplementowania")
             case "3":
